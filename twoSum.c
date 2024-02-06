@@ -1,8 +1,7 @@
-/**
- * Note: The returned array must be malloced, assume caller calls free().
- */
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
 
- /*
 int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     void aux(int index, int* result){
         if (index < numsSize){
@@ -25,12 +24,8 @@ int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
     aux(0, result);
     return result;
 }
-*/
 
-#include <stdio.h>
-#include <stdlib.h>
-
-int* twoSum(int* nums, int numsSize, int target, int* returnSize) {
+int* twoSum_v2(int* nums, int numsSize, int target, int* returnSize) {
 
     int **values_and_indices = (int**)malloc(sizeof(int*) * numsSize);
     for(int i = 0; i < numsSize; i++){
